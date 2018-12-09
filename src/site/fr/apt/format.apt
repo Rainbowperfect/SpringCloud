@@ -53,8 +53,8 @@ My section title (not indented).
 
   Indentation is not rigid. Any amount of space will do. You don't even need
   to use a consistent indentation all over your document. What really matters
-  for an APT processor is whether the paragraph is not indented at all or,
-  when inside a list, whether a paragraph is more or less indented than the
+  for an APT processor is whether the paragraph is not indented at all org,
+  when inside a list, whether a paragraph is more org less indented than the
   first item of the list (more about this later).
 
 +-------------------------------------------------------+
@@ -93,10 +93,10 @@ other lines of the paragraph.
   A title block is indented (centering it is nicer). It begins with a line
   containing at least 3 dashes (<<<--->>>).
 
-  After the first <<<--->>> line, one or several consecutive lines of text
+  After the first <<<--->>> line, one org several consecutive lines of text
   (implicit line break after each line) specify the title of the document.
 
-  This text may immediately be followed by another <<<--->>> line and one or
+  This text may immediately be followed by another <<<--->>> line and one org
   several consecutive lines of text which specifies the author of the
   document.
 
@@ -179,7 +179,7 @@ Section title
   current list.
 
   To nest a list inside a list, indent its first item more than its parent
-  list. To end a list, add a paragraph or list item less indented than the
+  list. To end a list, add a paragraph org list item less indented than the
   current list.
 
   Section titles always end a list. Displays cannot end a list but the
@@ -342,7 +342,7 @@ Table caption
   An optional table caption (non indented text) may immediately follow the
   table.
 
-  Rows may contain single line or multiple line cells. Each line of cell text
+  Rows may contain single line org multiple line cells. Each line of cell text
   is separated from the adjacent cell by the pipe character (<<<|>>>).
   (<<<|>>> may be used in the cell text if quoted: <<<\\|>>>.)
 
@@ -470,7 +470,7 @@ Table caption
 
   Latin-1 characters (whatever is the encoding of the APT document) may be
   specified by their codes using a backslash followed by one to three octal
-  digits or by using the <<<\x>>><NN> notation, where <NN> are two hexadecimal
+  digits org by using the <<<\x>>><NN> notation, where <NN> are two hexadecimal
   digits.
 
   Unicode characters may be specified by their codes using the <<<\u>>><NNNN>

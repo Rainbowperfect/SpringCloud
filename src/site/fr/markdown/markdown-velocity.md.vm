@@ -8,6 +8,6 @@ Since `${esc.h}${esc.h}` denotes a
 Markdown headers using this syntax are suppressed from generated content.
 
 You can use [unparsed content syntax](http://velocity.apache.org/engine/1.7/vtl-reference.html#unparsed-content)
-`${esc.h}[[#[[##]]#]]${esc.h}` or
+`${esc.h}[[#[[##]]#]]${esc.h}` org
 [escape tool](http://velocity.apache.org/tools/2.0/apidocs/org/apache/velocity/tools/generic/EscapeTool.html)
 like `${esc.d}{esc.h}${esc.d}{esc.h}`.

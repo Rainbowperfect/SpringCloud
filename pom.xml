@@ -4,15 +4,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>or.myselef</groupId>
+  <groupId>org.myself</groupId>
   <artifactId>springcloud</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
-
-  <name>Maven</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://maven.apache.org/</url>
-  <inceptionYear>2001</inceptionYear>
-
+  <modules>
+    <module>springcloud_api</module>
+      <module>springcloud_privode_dept_8001</module>
+    <module>springcloud_consumer_dept_80</module>
+      <module>springcloud_eureka_7001</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -72,4 +73,53 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    <plugins>
+      <!-- 资源文件拷贝插件 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+      <!-- java编译插件 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.2</version>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+
+    <resources>
+      <!-- 使用Maven部署的时候，xml和properties配置文件也一起部署到Tomcat -->
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+          <include>**/*.yml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+      <!-- 默认是以下配置 -->
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+          <include>**/*.yml</include>
+        </includes>
+        <filtering>false</filtering>
+      </resource>
+    </resources>
+  </build>
 </project>
