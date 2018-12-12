@@ -20,12 +20,28 @@
 
     <dependencies>
 
+
+        <!--消费者依赖-->
         <dependency>
-            <groupId>or.myselef</groupId>
+            <groupId>org.myself</groupId>
             <artifactId>springcloud_api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--消费者依赖-->
+
+        <!-- Ribbon相关 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
