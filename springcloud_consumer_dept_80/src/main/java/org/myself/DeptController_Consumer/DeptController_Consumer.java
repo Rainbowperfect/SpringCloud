@@ -25,6 +25,7 @@ public class DeptController_Consumer {
      * ResponseBean.class:HTTP响应转换成对象类型
      */
     //private static final String REST_URL_PREFIX = "http://localhost:8001";
+
     private static final String REST_URL_PREFIX = "http://springcloud_dept";
 
 
